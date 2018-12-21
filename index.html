@@ -5,12 +5,10 @@
     <meta name="author" content="@viljamis" />
     <meta name="apple-mobile-web-app-title" content="heldsm.com" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
     <meta
       name="description"
       content="Helsinki Design Systems organizes meetups for people who want to learn more about design system tools, patterns and practices."
     />
-
     <meta property="og:title" content="Helsinki Design Systems Meetup" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://heldsm.com/" />
@@ -20,7 +18,6 @@
       content="Helsinki Design Systems organizes meetups for people who want to learn more about design system tools, patterns and practices."
     />
     <meta property="og:site_name" content="Helsinki Design Systems" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Helsinki Design Systems Meetup" />
     <meta
@@ -30,26 +27,21 @@
     <meta name="twitter:creator" content="@hel_dsm" />
     <meta name="twitter:creator:id" content="909348966797541376" />
     <meta name="twitter:image:src" content="https://heldsm.com/opengraph.jpg" />
-
     <link rel="canonical" href="https://heldsm.com/" />
     <link rel="image_src" href="https://heldsm.com/opengraph.jpg" />
-
     <title>Helsinki Design Systems</title>
-
     <style>
-      /**
-       * DESIGN TOKENS
-       */
       :root {
-        --color-link: #ff5a4b;
-        --color-text: #212121;
+        --color-primary: #ff5a4b;
+        --color-dark: #212121;
+        --color-light: #fff;
         --font-text: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
           sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       }
-
-      /**
-       * FEATURE TEST FOR BETTER EXPERIENCE
-       */
+      ::selection {
+        background: var(--color-primary);
+        color: var(--color-light);
+      }
       @supports (display: grid) and (color: var(--color-primary)) {
         * {
           box-sizing: border-box;
@@ -63,7 +55,8 @@
         }
         body {
           font-family: var(--font-text);
-          color: var(--color-text);
+          color: var(--color-dark);
+          background: var(--color-light);
           line-height: 1.4;
           text-align: center;
           max-width: none;
@@ -82,8 +75,10 @@
           width: 12vw;
           height: auto;
         }
+        .logo {
+          fill: var(--color-primary);
+        }
         h1 {
-          /* Set 24px as the minimum size for text */
           font-size: calc(24px + 4vw);
           letter-spacing: -0.15vw;
           line-height: 1.1;
@@ -94,7 +89,7 @@
           margin: 0 auto;
         }
         a {
-          color: var(--color-link);
+          color: var(--color-primary);
         }
       }
     </style>
@@ -106,7 +101,7 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
       >
-        <circle fill="#ff5A4b" cx="107.5" cy="107.5" r="107.5" />
+        <circle class="logo" cx="107.5" cy="107.5" r="107.5" />
         <path
           d="M82.73 156.26H74.5c-1.72 0-2.65-.93-2.65-2.65v-42.15H57.02v42.15c0 1.72-.93 2.65-2.65 2.65h-8.22c-1.72 0-2.65-.93-2.65-2.65V57.39c0-1.72.93-2.65 2.65-2.65h8.22c1.72 0 2.65.93 2.65 2.65v41.22h14.84V57.39c0-1.72.93-2.65 2.65-2.65h8.22c1.72 0 2.65.93 2.65 2.65v96.22c0 1.72-.93 2.65-2.65 2.65zm46.91 0h-31c-1.73 0-2.66-.93-2.66-2.65V57.39c0-1.72.93-2.65 2.65-2.65h31.01c1.72 0 2.65.93 2.65 2.65v7.56c0 1.72-.93 2.65-2.65 2.65H109.5v31h19.21c1.73 0 2.65.94 2.65 2.66v7.55c0 1.73-.92 2.65-2.65 2.65H109.5v31.94h20.14c1.72 0 2.65.93 2.65 2.65v7.56c0 1.72-.93 2.65-2.65 2.65zm47.2 0h-31.1c-1.72 0-2.65-.93-2.65-2.65V57.39c0-1.72.93-2.65 2.65-2.65h8.22c1.72 0 2.65.93 2.65 2.65v86.01h20.24c1.72 0 2.65.93 2.65 2.65v7.56c0 1.72-.93 2.65-2.65 2.65z"
           fill="#fff"
